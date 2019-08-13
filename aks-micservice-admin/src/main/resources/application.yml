@@ -1,0 +1,18 @@
+server:
+  port: 8030
+
+spring:
+  datasource:
+    platform: mysql
+  application:
+    name: aks-servicedev-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+db:
+  num: 1
+  url:
+    0: jdbc:mysql://localhost:3306/nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
+  user: root
+  password: 123456
