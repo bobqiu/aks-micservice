@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.aks.micservice</groupId>
+    <artifactId>aks-micservice</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>aks-micservice-security</module>
+        <module>aks-micservice-admin</module>
+        <module>aks-micservice-gateway</module>
+    </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.9.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <properties>
+        <project.build.jdk>1.8</project.build.jdk>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+<!--        <spring.version>5.1.7.RELEASE</spring.version>-->
+<!--        <druid.version>1.1.18</druid.version>-->
+<!--        <fastjson.version>1.2.38</fastjson.version>-->
+<!--        <mysql.version>5.1.46</mysql.version>-->
+<!--        <log4j.version>1.2.17</log4j.version>-->
+<!--        <slf4j.version>1.7.19</slf4j.version>-->
+<!--        <aspectjweaver.version>1.8.8</aspectjweaver.version>-->
+<!--        <fileupload.version>1.3.1</fileupload.version>-->
+<!--        <jstl.version>1.2</jstl.version>-->
+<!--        <commons-codec.version>1.11</commons-codec.version>-->
+<!--        <jcaptcha.version>1.0</jcaptcha.version>-->
+<!--        <mybatis-plus.version>3.1.0</mybatis-plus.version>-->
+<!--        &lt;!&ndash;        <mybatis-plus.version>3.1.1</mybatis-plus.version>&ndash;&gt;-->
+<!--        <mybatis-spring.version>2.0.1</mybatis-spring.version>-->
+<!--        &lt;!&ndash;<mybatis.version>3.4.2</mybatis.version>&ndash;&gt;-->
+<!--        &lt;!&ndash; <mybatis.version>3.5.0</mybatis.version>&ndash;&gt;-->
+<!--        <commons-beanutils.version>1.8.3</commons-beanutils.version>-->
+<!--        <quartz.version>2.3.0</quartz.version>-->
+<!--        &lt;!&ndash; log &ndash;&gt;-->
+<!--        <logback-classic.vScheduleJobMapperersion>1.1.7</logback-classic.vScheduleJobMapperersion>-->
+<!--        <logback-ext-spring.version>0.1.4</logback-ext-spring.version>-->
+<!--        <jcl-over-slf4j.version>1.7.21</jcl-over-slf4j.version>-->
+        <sentinel-spring-cloud-gateway-adapter.version>1.6.3</sentinel-spring-cloud-gateway-adapter.version>
+        <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
+        <spring-cloud-alibaba-dependencies.version>2.0.0.RELEASE</spring-cloud-alibaba-dependencies.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.2</version>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
